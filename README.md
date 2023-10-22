@@ -98,7 +98,10 @@ php artisan migrate
 
 
 # ==== nginx server setup ====
+
+```
 cd /etc/nginx/sites-available
+
 nano default
 
 server {
@@ -133,3 +136,4 @@ server {
         deny all;
     }
 }
+```
