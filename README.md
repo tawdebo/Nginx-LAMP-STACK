@@ -99,11 +99,11 @@ php artisan migrate
 
 # ==== nginx server setup ====
 
-```
 cd /etc/nginx/sites-available
 
 nano default
 
+```
 server {
     server_name ip_address_here;
     root /var/www/html/project/public;
@@ -136,4 +136,5 @@ server {
         deny all;
     }
 }
+
 ```
