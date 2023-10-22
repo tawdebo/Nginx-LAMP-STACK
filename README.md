@@ -5,11 +5,11 @@ NGINX LEMP Stack Setup PHP 8.1, Nginx, MySQL, Git, Composer
 #  LEMP Stack Setup - Ubuntu
 ====Install Nginx =====
 ```
-
 sudo apt update
 sudo apt install nginx
 sudo ufw status
 sudo ufw app list
+```
 
 i.	sudo ufw allow 'Nginx Full'
 ii.	sudo ufw allow 'OpenSSH'
@@ -19,8 +19,8 @@ Check Ip Address
 	curl icanhazip.com
 
 #  ==== Install MySQL ====
-```
 
+```
 CREATE USER 'blog'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_here';
 GRANT ALL ON blog.* TO 'blog'@'localhost';
 
