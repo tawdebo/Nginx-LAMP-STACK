@@ -22,15 +22,15 @@ Check Ip Address
 CREATE USER 'blog'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_here';
 GRANT ALL ON blog.* TO 'blog'@'localhost';
 
-	sudo apt install mysql-server
+sudo apt install mysql-server
 sudo mysql_secure_installation 
 Add new Database and User
-1.	sudo mysql
-2.	CREATE DATABASE example_database;
-3.	CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
-4.	GRANT ALL ON example_database.* TO 'username'@'%';
-5.	mysql -u example_user -p
-6.	SHOW DATABASES;
+sudo mysql
+   CREATE DATABASE example_database;
+   CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+   GRANT ALL ON example_database.* TO 'username'@'%';
+   mysql -u example_user -p
+   SHOW DATABASES;
 
 #  === Install PHP 8.1 ==== 
 Update machine 
@@ -48,12 +48,12 @@ apt install git
 
 # ===Install Composer ====
 
-1.	sudo apt install wget php-cli php-zip unzip
-2.	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-3.	HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
-4.	php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-5.	sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-6.	composer
+sudo apt install wget php-cli php-zip unzip
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+composer
 
 # === Deploy Laravel ===
 
