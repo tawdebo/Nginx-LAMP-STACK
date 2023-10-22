@@ -3,12 +3,13 @@ NGINX LEMP Stack Setup PHP 8.1, Nginx, MySQL, Git, Composer
 
 
 #  LEMP Stack Setup - Ubuntu
-=================================Install Nginx ==========================
+====Install Nginx =====
 
 sudo apt update
 sudo apt install nginx
 sudo ufw status
 sudo ufw app list
+
 i.	sudo ufw allow 'Nginx Full'
 ii.	sudo ufw allow 'OpenSSH'
 
@@ -16,7 +17,7 @@ Check Ip Address
 	ip addr show
 	curl icanhazip.com
 
-#  ================================Install MySQL==============================
+#  ==== Install MySQL ====
 
 CREATE USER 'blog'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_here';
 GRANT ALL ON blog.* TO 'blog'@'localhost';
@@ -31,7 +32,7 @@ Add new Database and User
 5.	mysql -u example_user -p
 6.	SHOW DATABASES;
 
-#  =========================Install PHP 8.1=================================
+#  === Install PHP 8.1 ==== 
 Update machine 
 	sudo apt update && sudo apt upgrade -y  
 #Install dependencies 
@@ -41,10 +42,12 @@ sudo add-apt-repository ppa:ondrej/php -y
 #Now to install PHP 8.1 FPM and its modules 
 sudo apt install php8.1-fpm php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl php8.1-bcmath
 
-#  =====================Install Git=============================
+#  ====Install Git ====
+
 apt install git
 
-# =============================Install Composer==========================
+# ===Install Composer ====
+
 1.	sudo apt install wget php-cli php-zip unzip
 2.	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 3.	HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
@@ -52,7 +55,8 @@ apt install git
 5.	sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 6.	composer
 
-# =======================Deploy Laravel ===========================
+# === Deploy Laravel ===
+
 1.	Direct file upload
 2.	Using git
 
@@ -71,7 +75,7 @@ php artisan migrate
 
 
 
-# =============== nginx server setup ===================================
+# ==== nginx server setup ====
 cd /etc/nginx/sites-available
 nano default
 
